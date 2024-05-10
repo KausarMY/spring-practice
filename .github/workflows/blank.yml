@@ -11,11 +11,5 @@ jobs:
 
       - name: Get file path and pod name (replace with your input logic)
         id: get_inputs
-        run: |
-          # Replace with your logic to retrieve file path and pod name from request
-          file_path="path/to/your/file.txt"
-          pod_name="my-pod"
-          echo "::set-output name=file_path::$file_path"
-          echo "::set-output name=pod_name::$pod_name"
-
-
+        run: echo "path/to/your/file.txt"
+         
