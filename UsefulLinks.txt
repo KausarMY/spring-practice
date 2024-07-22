@@ -1,0 +1,85 @@
+OAS
+		1. What is the proper structure of a OAS project? Is it a standard maven structure? - 
+		If we are integrating OpenAPI into a Maven project, we can follow a standard Maven project structure with some additional directories and files for the API specifications.
+	my-api-project/
+	├── README.md
+	├── LICENSE
+	├── .gitignore
+	├── pom.xml
+	└── src
+	    ├── main
+	    │   ├── java
+	    │   │   └── com
+	    │   │       └── example
+	    │   │           └── myapiproject
+	    │   │               └── Application.java
+	    │   └── resources
+	    │       └── api
+	    │           ├── openapi.yaml
+	    │           ├── components
+	    │           │   ├── schemas
+	    │           │   │   └── User.yaml
+	    │           │   ├── responses
+	    │           │   ├── parameters
+	    │           │   ├── examples
+	    │           │   ├── headers
+	    │           │   ├── securitySchemes
+	    │           │   ├── links
+	    │           │   └── callbacks
+	    │           └── paths
+	    │               └── users.yaml
+	    └── test
+	        └── java
+	            └── com
+	                └── example
+	                    └── myapiproject
+	                        └── ApplicationTest.java
+	
+		1. 
+		2. What is the proper name of the oas? Where should it be placed?
+		3. Do oas-generators generate stubs?
+		4. Are client SDKs useful? How are we calling worker API from EM?
+		5. How detailed should be the documentation?
+				a. https://learn.openapis.org/specification/docs.html
+		6. What is the naming convention we have to adopt for the spec?
+				a. https://support.smartbear.com/swaggerhub/docs/en/get-started/openapi-3-0-tutorial.html
+				b. https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/webhook-example.yaml
+				c. https://swagger.io/docs/specification/about/
+				d. https://swagger.io/docs/specification/describing-request-body/ and the response page
+		7. What is the principle behind spec-first development?
+				a. https://www.atlassian.com/blog/technology/spec-first-api-development
+				b. https://swagger.io/resources/articles/adopting-an-api-first-approach/
+				c. https://swagger.io/blog/code-first-vs-design-first-api/
+				d. https://devblogs.microsoft.com/ise/design-api-first-with-typespec/
+				e. https://www.baeldung.com/spring-boot-openapi-api-first-development
+				f. https://learn.openapis.org/best-practices.html
+
+🙏
+
+REST API Guidance
+		1. https://microsoft.github.io/code-with-engineering-playbook/design/design-patterns/rest-api-design-guidance/
+		2. https://inside-docupedia.bosch.com/confluence/display/APIINITIATIVE/API+Enablement+Initiative+Home
+
+🙏
+
+Development Environment
+		1. What is the preferred IDE? Can we do everything in VS Code?
+				a. Is our team comfortable with dev container?
+		2. https://spring.io/blog/2018/11/08/spring-boot-in-a-container
+		3. https://openapi.tools/
+
+Health checks and Tests
+		1. How to unit test services in a docker image?
+		2. https://stackoverflow.com/questions/61685392/java-spring-boot-change-the-port-of-actuator-health-endpoint-to-a-custom-port
+		3. https://docs.spring.io/spring-boot/reference/actuator/endpoints.html#actuator.endpoints.kubernetes-probes.lifecycle
+		4. https://docs.spring.io/spring-boot/reference/actuator/index.html
+		5. https://docs.docker.com/reference/dockerfile/#healthcheck
+		6. https://spring.io/blog/2018/11/08/spring-boot-in-a-container
+		7. https://testcontainers.com/guides/testing-spring-boot-rest-api-using-testcontainers/ and https://testcontainers.com/guides/testing-rest-api-integrations-using-mockserver/
+		8. https://spring.io/guides/gs/testing-web
+		9. https://docs.docker.com/language/java/run-tests/ - is this the right approach
+		10. How to wait for the boot app start?
+
+Open API Initiative
+		1. https://stoplight.io/open-source/spectral - linter
+		2. https://www.bastienfoucher.net/writing-apis-requirements-the-best-of-api-goal-canvas-and-ddd-event-storming
